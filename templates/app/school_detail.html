@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>detail of school</h1>
+            <h1>name of the school {{DSO.SchoolName}}</h1>
+            <h1>name of the principle {{DSO.SchoolPrincpal}}</h1>
+            <h1>name of the location {{DSO.SchoolLocation}}</h1>
+            <h1>*********************</h1>
+        <h1>details of student</h1>
+
+
+        {% for school in DSO.Students.all %}
+        <h1>name of the studunt {{school.Sname}}</h1>
+        <h1>age of the studunt {{school.Sage}}</h1>
+     
+        <h1>*********************</h1>
+        {% endfor %}
+        <h1><a href="{% url 'update' pk=DSO.pk %}">update</a></h1>
+        <h1><a href="{% url 'delete' pk=DSO.pk %}">delete</a></h1>
+    </center>
+</body>
+</html>

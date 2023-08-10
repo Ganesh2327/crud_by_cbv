@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <center>
+        <h1>school delete_confirmation</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+          
+           <button> <input type="submit" value="sure"></button><br><br>
+
+
+        </form>
+        <button><h1><a href="{% url 'Schoollist' %}">go to list </a></h1></button>
+
+      <button> <h1><a href="{% url 'details' pk=dso.pk %}">go to details</a></h1></button>
+    </center>
+</body>
+</html>
